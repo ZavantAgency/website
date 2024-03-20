@@ -5,7 +5,6 @@
 	// Create writable stores for date and time
 	const date = writable<string>("");
 	const time = writable<string>("");
-	const timeZone = writable<any>("");
 
 	// Update date and time every second
 	const interval = setInterval(updateDateTime, 1000);
@@ -15,32 +14,35 @@
 		const now = new Date();
 
 		date.set(now.toDateString());
-		time.set(now.toLocaleTimeString());
-		// timeZone.set(Intl.DateTimeFormat("en-GB", { timeZone: "short" }));
+		time.set(now.toLocaleTimeString("default", { timeZoneName: "short" }));
 	}
 
 	// Cleanup interval on component destruction
 	onDestroy(() => {
 		clearInterval(interval);
 	});
+
+	// The height of the bottom block
+	let bottomBlockHeight: number;
 </script>
 
 <svelte:head>
-	<title>ZAVANT Agency</title>
+	<title>ZAVANT AGENCY</title>
+	<meta name="theme-color" content="#050505" />
 </svelte:head>
 
-<div class="transition-400 flex flex-col h-full select-none p-20 text-primary">
+<div class="transition-400 flex flex-col h-full select-none p-10 pb-0 md-p-20 text-primary">
 	<!-- Top -->
-	<div class="flex-s-between items-start">
+	<div class="flex-s-between flex-col-reverse sm-flex-row gap-10 items-start">
 		<!-- Top Right -->
-		<p class="w-20% max-w-450px">
+		<h1 class="md-w-20% max-w-400px">
 			We are a remote design and development agency designing creative experiences for conversion
 			and retention on the web.
-		</p>
+		</h1>
 
 		<!-- Top Left -->
-		<div class="flex flex-col gap-2.5 items-end text-right">
-			<div class="w-150px">{$time} {$timeZone}</div>
+		<div class="flex flex-col gap-2.5 sm-(items-end text-right)">
+			<div class="w-150px">{$time}</div>
 
 			<div class="p-(x-2.5 y-.5) rounded-full b b-primary flex-s-center items-center gap-1 w-fit">
 				<span> Active </span>
@@ -54,14 +56,17 @@
 	<!-- Middle -->
 	<div class="m-a">
 		<img
-			class=" text-primary rounded bg-primary h-50 w-50 p-2.5 transition-400 hover:(op-90 scale-102.5)"
+			class=" text-primary rounded bg-primary h-50 w-50 p-2.5 transition-400 op-85 hover:(op-100 scale-102.5)"
 			src="src/lib/assets/images/zavant-logo.svg"
 			alt="Zavant's Logo"
 		/>
 	</div>
 
 	<!-- Bottom -->
-	<div class="mt-a flex-s-between items-start">
+	<div
+		class={"mt-a flex-s-between items-start "}
+		style={`margin-bottom:${bottomBlockHeight + 10}px`}
+	>
 		<!-- Social Media -->
 		<div></div>
 
@@ -72,6 +77,9 @@
 	</div>
 </div>
 
-<div class="p-2 bg-primary text-[hsl(0,0%,2%)] absolute bottom-0 right-0 left-0 text-center">
+<div
+	class="p-2 bg-primary text-[hsl(0,0%,2%)] absolute bottom-0 right-0 left-0 text-center"
+	bind:clientHeight={bottomBlockHeight}
+>
 	Contact us through our social media channels, we will love to hear from you
 </div>
