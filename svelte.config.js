@@ -9,6 +9,12 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		    alias: {
+      "~": "src",
+			"assets":"src/lib/assets",
+			"images":"src/lib/assets/images",
+			"videos":"src/lib/assets/videos",
+    },
 	},
 };
 

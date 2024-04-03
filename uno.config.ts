@@ -2,6 +2,7 @@ import extractorSvelte from "@unocss/extractor-svelte";
 import {
 	defineConfig,
 	presetIcons,
+	presetWebFonts,
 	presetUno,
 	transformerDirectives,
 	transformerVariantGroup,
@@ -40,6 +41,13 @@ export default defineConfig({
 	presets: [
 		myPreset,
 		presetUno(),
+		presetWebFonts({
+			provider: "google",
+			fonts: {
+				// sans: "Roboto",
+				primary: "Fira Code",
+			},
+		}),
 		presetIcons({
 			scale: 1.2,
 			cdn: "https://esm.sh/",
