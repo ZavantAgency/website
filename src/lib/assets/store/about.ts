@@ -1,7 +1,7 @@
 export const mail: string = "zavant.design@gmail.com";
 export const aboutUs: string =
 	"We are a remote design and development agency designing creative experiences for conversion";
-export const status: boolean = true;
+export const active: boolean = true;
 
 export const socials = [
 	{

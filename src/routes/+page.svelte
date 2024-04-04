@@ -2,9 +2,7 @@
 	import { onDestroy } from "svelte";
 	import { writable } from "svelte/store";
 
-	import { socials, mail, aboutUs, status, marquee } from "~/lib/assets/store/about";
-
-	import logo from "images/zavant-logo.svg";
+	import { socials, mail, aboutUs, active, marquee } from "~/lib/assets/store/about";
 
 	// Create writable stores for date and time
 	const date = writable<string>("");
@@ -36,10 +34,10 @@
 </svelte:head>
 
 <div
-	class="transition-400 flex flex-col h-full select-none p-10 md-p-20 pb-0! text-primary font-primary"
+	class="transition-400 flex flex-col h-full select-none p-5 md-p-20 pb-0! text-primary font-primary"
 >
 	<!-- Top -->
-	<div class="flex-s-between flex-col-reverse sm-flex-row gap-10 items-start">
+	<div class="flex-s-between flex-col-reverse sm-flex-row gap-5 items-start">
 		<!-- Top Right -->
 		<h1 class="md-w-40% max-w-400px">
 			{aboutUs}
@@ -47,10 +45,10 @@
 
 		<!-- Top Left -->
 		<div class="flex flex-col gap-2.5 sm-(items-end text-right)">
-			<div class="w-150px">{$time}</div>
+			<div>{$time}</div>
 
 			<div class="p-(x-2.5 y-.5) rounded-full b b-primary flex-s-center items-center gap-1 w-fit">
-				<span> {status ? "Active" : "Inactive"} </span>
+				<span> {active ? "Active" : "Inactive"} </span>
 				<div class="text-xl fw-bold animate-pulse">•</div>
 			</div>
 
@@ -60,17 +58,15 @@
 
 	<!-- Middle -->
 	<div class="m-a">
-		<img
-			class=" text-primary rounded bg-primary h-50 w-50 p-2.5 transition-400 op-85 hover:(op-100 scale-102.5)"
-			src={logo}
-			alt="Zavant's Logo"
-		/>
+		<div
+			class="i-zavant-logo h-50 w-50 fill-primary transition-400 op-85 hover:(op-100 scale-102.5)"
+		></div>
 	</div>
 
 	<!-- Bottom -->
 	<div
-		class={"mt-a flex-s-between items-start pb"}
-		style={`margin-bottom:${bottomBlockHeight + 10}px`}
+		class={"mt-a flex-s-between gap-4 items-start flex-wrap"}
+		style={`margin-bottom:${bottomBlockHeight + 8}px`}
 	>
 		<!-- Social Media -->
 		<ul class="flex flex-row gap-4">
