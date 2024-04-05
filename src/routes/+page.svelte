@@ -33,9 +33,7 @@
 	<meta name="theme-color" content="#050505" />
 </svelte:head>
 
-<div
-	class="transition-400 flex flex-col h-full select-none p-5 md-p-20 pb-0! text-primary font-primary"
->
+<div class="transition-400 flex flex-col h-full select-none p-6 pb-0! text-primary font-primary">
 	<!-- Top -->
 	<div class="flex-s-between flex-col-reverse sm-flex-row gap-5 items-start">
 		<!-- Top Right -->
