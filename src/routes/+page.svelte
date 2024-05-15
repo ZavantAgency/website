@@ -1,8 +1,9 @@
 <script lang="ts">
+	import Marquee from "svelte-fast-marquee";
 	import { onDestroy } from "svelte";
 	import { writable } from "svelte/store";
 
-	import { socials, mail, aboutUs, active, marquee } from "~/lib/assets/store/about";
+	import { socials, mail, aboutUs, active, marqueeContent } from "~/lib/assets/store/about";
 
 	// Create writable stores for date and time
 	const date = writable<string>("");
@@ -90,12 +91,16 @@
 </div>
 
 <div
-	class="p-2 bg-primary text-[hsl(0,0%,2%)] absolute bottom-0 right-0 left-0 text-center flex-s-center flex-row gap-2.5"
+	class="p-2 bg-primary text-[hsl(0,0%,2%)] absolute bottom-0 right-0 left-0"
 	bind:clientHeight={bottomBlockHeight}
 >
-	{#each marquee as _}
-		• {_} •
-	{/each}
+	<Marquee pauseOnHover={true} gap="1rem">
+		{#each marqueeContent as _}
+			<span>
+				•• {_} ••
+			</span>
+		{/each}
+	</Marquee>
 </div>
 
 <!-- a Walk around for the icons not showing expect statically already on the page -->

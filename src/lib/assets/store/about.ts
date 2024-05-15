@@ -7,28 +7,28 @@ export const socials = [
 	{
 		name: "X",
 		icon: "i-mingcute-social-x-line",
-		link: "https://twitter.com/zavant_design",
+		link: "https://twitter.com/zavant_agency",
 	},
 	{
 		name: "Instagram",
 		icon: "i-bxl-instagram-alt",
-		link: "https://www.instagram.com/zavant.design/",
+		link: "https://www.instagram.com/zavant.agency/",
 	},
 	{
 		name: "LinkedIn",
 		icon: "i-bxl-linkedin-square",
-		link: "http://linkedin.com/company/zavantdesign",
+		link: "https://www.linkedin.com/company/zavantagency/",
 	},
 ];
 
-export const marquee: string[] = [
+export const marqueeContent: string[] = [
 	"Contact us through our social media channels, we will love to hear from you",
 ];
 
 // an async function to fetch the download link from the server
 
 // export const fetchDownloadLinks = async () => {
-//   const data = await fetch("https://marketplace.netapps.ng/api/v1/version")
+//   const data = await fetch(""")
 //     .then(res => res.json())
 //     .then(res => res?.data)
 //     .catch(err => {
@@ -58,10 +58,10 @@ export const marquee: string[] = [
 //   }
 // };
 
-// export const Numbers = ["+234 906 567 8575", "+234 915 121 6060"];
+// export const Numbers = [""];
 // export const Address = [
 // 	{
-// 		name: "4 Kenema Close, Off Sakono Street, Off Ademola-Adetokunbo Street, Wuse 2, F.C.T - Abuja, Nigeria",
-// 		link: "https://goo.gl/maps/uk6nqsyAQuz563Nj9",
+// 		name: "",
+// 		link: "",
 // 	},
 // ];
