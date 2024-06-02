@@ -41,11 +41,13 @@
 	<!-- Top -->
 	<div class="flex-s-between flex-col-reverse sm-flex-row gap-5 items-start">
 		<!-- Top Right -->
-		<h1 class="md-w-40% max-w-400px">
-			{aboutUs}
+		<div class="md-w-40% max-w-400px space-y-2">
+			<h1>
+				{aboutUs}
+			</h1>
 
 			<ModeToogle />
-		</h1>
+		</div>
 
 		<!-- Top Left -->
 		<div class="flex flex-col gap-2.5 sm-(items-end text-right)">
