@@ -6,6 +6,7 @@ import {
 	presetUno,
 	transformerDirectives,
 	transformerVariantGroup,
+	presetMini,
 } from "unocss";
 import { myPreset } from "./my-preset";
 
@@ -16,6 +17,7 @@ export default defineConfig({
 	theme: {
 		colors: {
 			primary: "#C1FF3C",
+			dark: "hsl(0,0%,2%)",
 		},
 	},
 	rules: [],
@@ -77,6 +79,7 @@ export default defineConfig({
 				},
 			},
 		}),
+		presetMini(),
 	],
 	transformers: [transformerDirectives(), transformerVariantGroup()],
 });

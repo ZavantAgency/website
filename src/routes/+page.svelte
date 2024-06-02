@@ -3,6 +3,7 @@
 	import { onDestroy } from "svelte";
 	import { writable } from "svelte/store";
 
+	import ModeToogle from "~/lib/components/ModeToogle.svelte";
 	import { socials, mail, aboutUs, active, marqueeContent } from "~/lib/assets/store/about";
 
 	// Create writable stores for date and time
@@ -34,19 +35,25 @@
 	<meta name="theme-color" content="#050505" />
 </svelte:head>
 
-<div class="transition-400 flex flex-col h-full select-none p-6 pb-0! text-primary font-primary">
+<div
+	class="transition-400 flex flex-col h-full select-none p-6 pb-0! dark:text-primary font-primary"
+>
 	<!-- Top -->
 	<div class="flex-s-between flex-col-reverse sm-flex-row gap-5 items-start">
 		<!-- Top Right -->
 		<h1 class="md-w-40% max-w-400px">
 			{aboutUs}
+
+			<ModeToogle />
 		</h1>
 
 		<!-- Top Left -->
 		<div class="flex flex-col gap-2.5 sm-(items-end text-right)">
 			<div>{$time}</div>
 
-			<div class="p-(x-2.5 y-.5) rounded-full b b-primary flex-s-center items-center gap-1 w-fit">
+			<div
+				class="p-(x-2.5 y-.5) rounded-full b b-[hsl(0,0%,2%)] dark-b-primary flex-s-center items-center gap-1 w-fit"
+			>
 				<span> {active ? "Active" : "Inactive"} </span>
 				<div class="text-xl fw-bold animate-pulse">•</div>
 			</div>
@@ -91,7 +98,7 @@
 </div>
 
 <div
-	class="p-2 bg-primary text-[hsl(0,0%,2%)] absolute bottom-0 right-0 left-0"
+	class="p-2 text-primary bg-[hsl(0,0%,2%)] dark-(bg-primary text-[hsl(0,0%,2%)]) absolute bottom-0 right-0 left-0"
 	bind:clientHeight={bottomBlockHeight}
 >
 	<Marquee pauseOnHover={true} gap="1rem">
