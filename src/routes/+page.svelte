@@ -67,13 +67,13 @@
 	<!-- Middle -->
 	<div class="m-a">
 		<div
-			class="i-zavant-logo h-50 w-50 fill-primary transition-400 op-85 hover:(op-100 scale-102.5)"
+			class="i-zavant-logo size-30 md-size-50 fill-primary transition-400 op-85 hover:(op-100 scale-102.5)"
 		></div>
 	</div>
 
 	<!-- Bottom -->
 	<div
-		class={"mt-a flex-s-between gap-4 items-start flex-wrap"}
+		class={"mt-a flex-s-between gap-4 items-end flex-wrap"}
 		style={`margin-bottom:${bottomBlockHeight + 8}px`}
 	>
 		<!-- Social Media -->

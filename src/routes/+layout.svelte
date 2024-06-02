@@ -4,7 +4,7 @@
 	import "uno.css";
 </script>
 
-<div class="h-full w-full bg-primary dark:bg-[hsl(0,0%,2%)]">
+<div class="h-full w-full bg-primary dark:bg-[hsl(0,0%,2%)] text-sm md-text-base">
 	<slot />
 </div>
 
