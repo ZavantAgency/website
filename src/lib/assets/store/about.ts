@@ -1,6 +1,6 @@
-export const mail: string = "zavant.design@gmail.com";
+export const mail: string = "zavant.agency@gmail.com";
 export const aboutUs: string =
-	"We are a remote design and development agency designing creative experiences for conversion and retention on the web";
+	"A remote design and development agency designing creative experiences for conversion and retention.";
 export const active: boolean = true;
 
 export const socials = [
@@ -14,11 +14,11 @@ export const socials = [
 		icon: "i-bxl-instagram-alt",
 		link: "https://www.instagram.com/zavant.agency/",
 	},
-	{
-		name: "LinkedIn",
-		icon: "i-bxl-linkedin-square",
-		link: "https://www.linkedin.com/company/zavantagency/",
-	},
+	// {
+	// 	name: "LinkedIn",
+	// 	icon: "i-bxl-linkedin-square",
+	// 	link: "https://www.linkedin.com/company/zavantagency/",
+	// },
 ];
 
 export const marqueeContent: string[] = [
